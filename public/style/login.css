@@ -1,0 +1,99 @@
+/**{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: #bb0a21;
+    --color2: #4B88A2;
+    --color3: #D3D4D9;
+    --color4: #FFF9FB;
+    --color5: #252627;
+    --ff:'Rubik', sans-serif;
+}
+body{
+    /*background-color: var(--color2);
+    font-family:var(--ff);
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+/*.pageLogin{
+    max-width:37.5rem ;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    margin-top: 25.0rem;
+    background-color: var(--color2);
+    padding: 8px 8px 8px 8px;
+    font-family: var(--ff);
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label{
+    font-size: 1.6rem;
+}
+
+.login input, #loginButton{
+    min-width: 31.0rem;
+    min-height: 4.8rem;
+}
+
+#loginButton, #socialLogin{
+    font-family: var(--ff);
+    text-transform: uppercase;
+    
+}
+
+.login label{
+    color: var(--textColor);
+    text-transform: uppercase;
+}
+
+
+.logo{
+    display: flex;
+    margin: 0 auto;
+}
+.logo h1{
+    color: var(--textColor);
+    text-transform: uppercase;
+    font-size: 3.2rem;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    min-width: 36.0rem;
+    gap: 1.2rem;
+    background-color: var(--color2);
+}
+
+.socialLogin{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.socialLogin p{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.socialLogin button{
+    margin: 0 auto;
+    min-width: 36.0rem;
+
+    border-radius: 8px;
+    min-height: 4.8rem;
+}
