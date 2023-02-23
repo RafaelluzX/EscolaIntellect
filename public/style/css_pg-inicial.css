@@ -48,7 +48,7 @@ p{
 
 
 .card, .card-title, .card-text {
-    color: var(--color4);
+    color: var(--color4)
 }
 
 .card-link {
