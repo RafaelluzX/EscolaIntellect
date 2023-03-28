@@ -8,11 +8,12 @@ import ux from "../images/ux.jpg";
 import gestao from "../images/gestao.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Card from "../components/Card";
 
 function Home() {
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <main>
         <section className="presentation-className-courses container mt-4">
           <h2 className="title-presentation">Um novo modo de aprender</h2>
@@ -166,7 +167,8 @@ function Home() {
           que? <a href="#">Clique aqui</a> e teste agora mesmo.
         </p>
       </section>
-    <Footer/>
+
+      <Footer />
     </>
   );
 }

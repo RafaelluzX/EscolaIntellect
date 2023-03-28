@@ -1,0 +1,24 @@
+.cardExperts {
+    display: grid;
+    grid-template-areas: "A B";
+}
+.cardExperts img {
+    width: 372px;
+    height: 294px;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.cardExperts H2  {
+    text-transform: uppercase;
+    margin-left: 10px;
+    
+    
+}
+
+.cardExperts p{
+    margin-left: 10px;
+}

@@ -1,0 +1,15 @@
+.cards{
+    width: 372px;
+    height: 194px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: solid #98B9AB;
+    padding-top: 10px;
+    border-radius: 5px;
+}
+
+.cards H2 {
+    text-transform: uppercase;
+    
+}
