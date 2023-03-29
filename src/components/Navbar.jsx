@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import user from "../images/user.jpg";
 
 function Navbar() {
@@ -6,9 +7,7 @@ function Navbar() {
     <header>
         <nav className="navbar navbar-dark navbar-expand-lg">
           <div className="container">
-            <a className="navbar-brand logo" href="pagina-inicial.html">
-              intellect
-            </a>
+            <Link to="/" className="navbar-brand logo">intellect</Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -98,9 +97,7 @@ function Navbar() {
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="../index.html">
-                      Sair
-                    </a>
+                    <Link to="/login" className="dropdown-item">Sair</Link>
                   </li>
                 </ul>
               </div>

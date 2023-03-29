@@ -8,7 +8,7 @@ import ux from "../images/ux.jpg";
 import gestao from "../images/gestao.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Card from "../components/Card";
+import {Link} from "react-router-dom";
 
 function Home() {
   return (
@@ -29,7 +29,7 @@ function Home() {
           <div className="col-sm-6 col-lg-4 p-2">
             <div className="card">
               <img src={idiomas} className="card-img" alt="" />
-              <div className="card-body card-img-overlay d-flex flex-column">
+              <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">Idiomas</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up
@@ -44,25 +44,20 @@ function Home() {
           <div className="col-sm-6 col-lg-4 p-2">
             <div className="card">
               <img src={p} className="card-img" alt="" />
-              <div className="card-img-overlay d-flex flex-column">
+              <div className="card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">Programação</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a
-                  href="../pagina-cursos/curso.html"
-                  className="card-link align-self-center"
-                >
-                  Acessar
-                </a>
+                <Link to="/cursos" className="card-link align-self-center">Acessar</Link>
               </div>
             </div>
           </div>
           <div className="col-sm-6 col-lg-4 p-2">
             <div className="card">
               <img src={d} className="card-img" alt="" />
-              <div className="card-body card-img-overlay d-flex flex-column">
+              <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">Data Science</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up
@@ -77,7 +72,7 @@ function Home() {
           <div className="col-sm-6 col-lg-4 p-2">
             <div className="card">
               <img src={ux} className="card-img" alt="" />
-              <div className="card-body card-img-overlay d-flex flex-column">
+              <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">UX & Design</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up
@@ -92,7 +87,7 @@ function Home() {
           <div className="col-sm-6 col-lg-4 p-2">
             <div className="card">
               <img src={medio} className="card-img" alt="" />
-              <div className="card-body card-img-overlay d-flex flex-column">
+              <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">Ensino médio</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up
@@ -107,7 +102,7 @@ function Home() {
           <div className="col-sm-6 col-lg-4 p-2">
             <div className="card">
               <img src={gestao} className="card-img" alt="" />
-              <div className="card-body card-img-overlay d-flex flex-column ">
+              <div className="card-body card-img-overlay d-flex flex-column justify-content-center ">
                 <h5 className="card-title">Gestão</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up

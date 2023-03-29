@@ -6,7 +6,7 @@ import Cursos from "./pages/Cursos"
 import { 
       BrowserRouter,
       Routes,
-      Route,
+      Route, Link
  } from "react-router-dom";
 
 function App() {

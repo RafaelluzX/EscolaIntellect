@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import CardExperts from "../components/CardExperts";
+import php from "../images/php.jpg";
+
 
 function Cursos() {
   return (
@@ -20,7 +22,7 @@ function Cursos() {
             tratores não altera o pão duris.{" "}
           </p>
         </section>
-        <section className="cards-courses container d-flex flex-wrap gap-1">
+        <section className="cards-courses container d-flex flex-wrap gap-1 justify-content-center">
           <Card titleCurse="JavaScript" />
           <Card titleCurse="HTML" />
           <Card titleCurse="CSS" />
@@ -38,8 +40,11 @@ function Cursos() {
             deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
           </p>
 
-          <div className="experts container mb-5">
-            <CardExperts />
+          <div className="experts container mb-5 d-flex flex-wrap gap-1 justify-content-center">
+            <CardExperts imgExpert={php} nameExpert="João" description="Front-end"/>
+            <CardExperts imgExpert={php} nameExpert="Ricardo" description="Back-end"/>
+            <CardExperts imgExpert={php} nameExpert="Fred" description="SQL"/>
+            <CardExperts imgExpert={php} nameExpert="Jorge" description="Cloud"/>
           </div>
         </section>
 
