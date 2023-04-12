@@ -62,8 +62,6 @@ function Login() {
                                 aria-describedby="emailHelp" placeholder="Enter Password"/>
                         </div>
                         <div className="col-md-12 text-center mb-3">
-                            <button type="submit" className="btn btn-block mybtn btn-primary tx-tfm mt-3">comece de
-                                graça</button>
                         </div>
                     </form>
                 </div>
