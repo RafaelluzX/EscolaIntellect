@@ -1,13 +1,27 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import CardExperts from "../components/CardExperts";
 import php from "../images/php.jpg";
-
+import { useEffect, useState } from "react";
 
 function Cursos() {
+  const [experts, setExperts] = useState([])
+
+  const listExperts = () => {
+    fetch("https://6437439e3e4d2b4a12e6b309.mockapi.io/api/experts")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setExperts(data);
+      });
+  };
+
+  useEffect(() => {
+    listExperts()
+  }, [])
+
   return (
     <>
       <Navbar />
@@ -41,17 +55,20 @@ function Cursos() {
           </p>
 
           <div className="experts container mb-5 d-flex flex-wrap gap-1 justify-content-center">
-            <CardExperts imgExpert={php} nameExpert="João" description="Front-end"/>
-            <CardExperts imgExpert={php} nameExpert="Ricardo" description="Back-end"/>
-            <CardExperts imgExpert={php} nameExpert="Fred" description="SQL"/>
-            <CardExperts imgExpert={php} nameExpert="Jorge" description="Cloud"/>
+            {experts && experts.map((expert) => (
+                <div className="experts col-4" key={expert.id}>
+                  <img src={expert.avatar} className="cardExperts" />
+                  <h2>{expert.name}</h2>
+                  <p>{expert.specialty}</p>
+                </div>
+              ))}
           </div>
         </section>
 
         <Footer />
       </div>
     </>
-  );
+  )
 }
 
 export default Cursos;
