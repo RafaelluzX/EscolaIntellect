@@ -8,7 +8,7 @@ import ux from "../images/ux.jpg";
 import gestao from "../images/gestao.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -50,7 +50,9 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <Link to="/cursos" className="card-link align-self-center">Acessar</Link>
+                <Link to="/cursos" className="card-link align-self-center">
+                  Acessar
+                </Link>
               </div>
             </div>
           </div>
