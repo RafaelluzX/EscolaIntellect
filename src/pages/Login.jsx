@@ -1,6 +1,27 @@
-import React from "react";
+import React from 'react'
 
 function Login() {
+
+    const [name, setName] = useState("")
+    const [users, setUsers] = useState([])
+    const [email,setEmail] = useState("")
+    const [password,setPassword] = useState("")
+
+    const createUser = ()=> {
+        console.log(name, email, password)
+        fetch("http://localhost:3000/create",{
+            method: "POST",
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                name,
+                email,
+                password
+            })
+        })
+    }
+
+    }
+
   return (
     <div className="container">
       <div className="row">
