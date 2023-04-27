@@ -1,103 +1,87 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import axios from 'axios';
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [user, setUser] = useState(null);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    console.log(email, password);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/login",
+        JSON.stringify({ email, password }),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      console.log(response.data);
+      setUser(response.data);
+    } catch (error) {
+      if (!error?.response) {
+        setError("Erro ao acessar o servidor");
+      } else if (error.response.status == 401) {
+        setError("Usuário ou senha inválidos");
+      }
+    }
+  };
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    setUser(null);
+    setError("");
+  };
+
   return (
-    <div className="container">
-      <div className="container d-flex flex-column">
-        <div
-          className="btn btn-primary"
-          data-bs-toggle="collapse"
-          href="#multiCollapseLogin"
-          role="button"
-          aria-expanded="false"
-          aria-controls="multiCollapseExample1"
-        >
-          Já tenho conta
+    <div className="login-form-wrap">
+      {user == null ? (
+        <div>
+          <h2 className="h2-login">Login</h2>
+          <form className="login-form">
+            <input className="input-login"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input className="input-login"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="btn-login"
+              onClick={(e) => handleLogin(e)}
+            >
+              Login
+            </button>
+          </form>
+          <p>{error}</p>
         </div>
-        <div className="container">
-          <div className="collapse multi-collapse" id="multiCollapseLogin">
-            <div className="container m-5">
-            <form className="container col-sm-6 col-lg-5 d-flex flex-column">
-              <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="emailLogin"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div className="mb-2">
-                <label for="exampleInputPassword1" className="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="passwordLogin"
-                />
-              </div>
-              <button type="submit" className="btn btn-primary ">
-                Entrar
-              </button>
-            </form>
-            </div>
-          </div>
+      ) : (
+        <div>
+          <h2 className="h2-login">Olá, {user.name}</h2>
+          <button
+            type="button"
+            className="btn-login"
+            onClick={(e) => handleLogout(e)}
+          >
+            Logout
+          </button>
         </div>
-        <button
-          className="btn btn-primary"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#multiCollapseCriarConta"
-          aria-expanded="false"
-          aria-controls="multiCollapseExample2"
-        >
-          Criar conta
-        </button>
-        <div className="container">
-          <div className="collapse multi-collapse" id="multiCollapseCriarConta">
-          <div className="container m-5">
-            <form className="container col-sm-6 col-lg-5 d-flex flex-column">
-              <div className="mb-3">
-              <label for="fullName" className="form-label">
-                  Nome completo
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="userName"
-                  aria-describedby="Nome"
-                />
-                <label for="exampleInputEmail1" className="form-label">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="emailCriarConta"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div className="mb-2">
-                <label for="exampleInputPassword1" className="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="passwordCriarConta"
-                />
-              </div>
-              <button type="submit" className="btn btn-primary ">
-                Começar
-              </button>
-            </form>
-            </div>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
