@@ -1,127 +1,91 @@
-import React from 'react'
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import axios from 'axios';
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [user, setUser] = useState(null);
 
-    const [name, setName] = useState("")
-    const [users, setUsers] = useState([])
-    const [email,setEmail] = useState("")
-    const [password,setPassword] = useState("")
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-    const createUser = ()=> {
-        console.log(name, email, password)
-        fetch("http://localhost:3000/create",{
-            method: "POST",
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({
-                name,
-                email,
-                password
-            })
-        })
+    console.log(email, password);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/login",
+        JSON.stringify({ email, password }),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      console.log(response.data);
+      setUser(response.data);
+    } catch (error) {
+      if (!error?.response) {
+        setError("Erro ao acessar o servidor");
+      } else if (error.response.status == 401) {
+        setError("Usuário ou senha inválidos");
+      }
     }
+  };
 
-    }
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    setUser(null);
+    setError("");
+  };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-5 mx-auto">
-          <div id="first">
-            <div className="myform form ">
-              <div className="logo mb-3">
-                <div className="col-md-12 text-center">
-                  <h1>intellect</h1>
-                </div>
-              </div>
-              <form action="" method="post" name="login">
-                <h2 className="text-center pb-3">Entre</h2>
-                <div className="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    id="email"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputEmail1">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    className="form-control"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter Password"
-                  />
-                </div>
-                <div className="col-md-12 text-center pt-3">
-                  <button
-                    type="submit"
-                    className=" btn btn-block mybtn btn-primary tx-tfm"
-                  >
-                    Login
-                  </button>
-                </div>
-                <div className="col-md-12 text-center">
-                  <div className="login-or">
-                    <hr className="hr-or" />
-                    <span className="span-or">ou</span>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div id="second">
-            <div className="myform form ">
-              <div className="logo mb-3">
-                <div className="col-md-12 text-center">
-                  <h2>Registre-se</h2>
-                </div>
-              </div>
-              <form action="#" name="registration">
-                <div className="form-group">
-                  <label for="exampleInputEmail1">Nome</label>
-                  <input
-                    type="text"
-                    name="firstname"
-                    className="form-control"
-                    id="name"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter Name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    id="email-new-user"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputEmail1">Senha</label>
-                  <input
-                    type="password"
-                    name="password"
-                    id="password-new-user"
-                    className="form-control"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter Password"
-                  />
-                </div>
-                <div className="col-md-12 text-center mb-3"></div>
-              </form>
-            </div>
-          </div>
+    <div className="h-100">
+      <div className=" login-form-wrap">
+      {user == null ? (
+        <div>
+          <h2 className="h2-login">Login</h2>
+          <form className="login-form">
+            <input className="input-login"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input className="input-login"
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="btn-login"
+              onClick={(e) => handleLogin(e)}
+            >
+              Login
+            </button>
+          </form>
+          <p>{error}</p>
         </div>
-      </div>
+      ) : (
+        <div>
+          <h2 className="h2-login">Olá, {user.name}</h2>
+          <button
+            type="button"
+            className="btn-login"
+            onClick={(e) => handleLogout(e)}
+          >
+            Logout
+          </button>
+        </div>
+      )}
     </div>
+    </div>
+    
   );
 }
 
