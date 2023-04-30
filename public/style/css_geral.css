@@ -15,8 +15,9 @@
     --ff:'Oswald', sans-serif;
 }
 
+
 body{
-    background-color: var(--color4)
+    background-color: var(--color4);
     }
     /*
     font-family: var(--ff);
