@@ -1,0 +1,10 @@
+.formCadastro{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform:uppercase ;
+  }

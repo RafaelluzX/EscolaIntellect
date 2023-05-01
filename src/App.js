@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./pages/Home"
 import Login from "./pages/Login";
 import Cursos from "./pages/Cursos"
+import Registro from "./pages/Registro"
 import { 
       BrowserRouter,
       Routes,
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/Cursos" element={<Cursos/>} />
       <Route path="/Login" element={<Login/>} />
+      <Route path="/Registro" element={<Registro/>} />
     </Routes>
   </BrowserRouter>
   );
