@@ -13,7 +13,7 @@ function LoginOrRegister() {
   return (
     <div>
       {isLogin ? <Login /> : <Registro />}
-      <button onClick={handleToggleForm}>
+      <button className="buttonCreate" onClick={handleToggleForm}>
         {isLogin ? "É novo por aqui?" : "Já possuo conta"}
       </button>
     </div>

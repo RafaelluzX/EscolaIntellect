@@ -23,4 +23,11 @@ button{
   background-color: #4B88A2;
   font-weight: 700;
   text-transform: uppercase;
+ 
+}
+
+.buttonCreate{
+  position: absolute;
+  margin-left: 550;
+  margin-top: 20px;
 }
