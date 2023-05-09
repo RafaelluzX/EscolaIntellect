@@ -11,9 +11,9 @@ function LoginOrRegister() {
     setIsLogin(!isLogin);
   };
   return (
-    <div>
+    <div className="flexContainer">
       {isLogin ? <Login /> : <Registro />}
-      <button className="buttonCreate" onClick={handleToggleForm}>
+      <button className="buttonRegister" onClick={handleToggleForm}>
         {isLogin ? "É novo por aqui?" : "Já possuo conta"}
       </button>
     </div>

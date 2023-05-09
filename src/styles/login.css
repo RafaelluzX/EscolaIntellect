@@ -23,11 +23,15 @@ button{
   background-color: #4B88A2;
   font-weight: 700;
   text-transform: uppercase;
- 
 }
 
-.buttonCreate{
-  position: absolute;
-  margin-left: 550;
-  margin-top: 20px;
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.buttonRegister{
+  margin: 0 auto;
+  margin-top: 10px;
 }
