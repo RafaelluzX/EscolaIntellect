@@ -18,8 +18,9 @@ function Registro() {
     setName(e.target.value);
   };
 
-  function createAcount() {
-    fetch("http://localhost:3000/users/create", {
+  function createAcount(e) {
+    e.preventDefault()
+    fetch("http://localhost:3030/users/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -31,9 +32,9 @@ function Registro() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        if (data.statusCode === 201) {
-          alert("OK");
-        }
+        
+          alert("USUARIO CRIADO ");
+        
       });
   }
 
