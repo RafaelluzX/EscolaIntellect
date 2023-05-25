@@ -35,9 +35,7 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" className="card-link align-self-center">
-                  Acessar
-                </a>
+                <button className="buttons-home" >Acessar</button> 
               </div>
             </div>
           </div>
@@ -51,7 +49,7 @@ function Home() {
                   the bulk of the card's content.
                 </p>
                 <Link to="/cursos" className="card-link align-self-center">
-                  Acessar
+                 <button className="buttons-home" >Acessar</button> 
                 </Link>
               </div>
             </div>
@@ -62,12 +60,10 @@ function Home() {
               <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">Data Science</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                Trabalhe com dados. Aprofunde seu conhecimento nas principais
+                 ferramentas de uma pessoa data  
                 </p>
-                <a href="#" className="card-link align-self-center">
-                  Acessar
-                </a>
+                <button className="buttons-home" >Acessar</button> 
               </div>
             </div>
           </div>
@@ -80,9 +76,7 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" className="card-link align-self-center">
-                  Acessar
-                </a>
+                <button className="buttons-home" >Acessar</button> 
               </div>
             </div>
           </div>
@@ -95,9 +89,7 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" className="card-link align-self-center">
-                  Acessar
-                </a>
+                <button className="buttons-home" >Acessar</button> 
               </div>
             </div>
           </div>
@@ -110,9 +102,7 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" className="card-link align-self-center">
-                  Acessar
-                </a>
+                <button className="buttons-home" >Acessar</button> 
               </div>
             </div>
           </div>

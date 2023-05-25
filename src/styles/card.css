@@ -15,7 +15,8 @@
     
 }
 
-.buttonCard{
+
+.buttonCard , .buttons-home{
     border-radius: 8px;
     min-width: 200px;
     margin: 0 auto;
@@ -42,7 +43,7 @@
     }
   }
   
-  .buttonCard,.cards {
+  .buttonCard,.cards,.card-img-overlay {
     animation: slide-in 1s ease-in-out;
   }
 

@@ -20,6 +20,15 @@ body{
     font-family: var(--ff);
 }
 
+.card-title{
+    text-transform: uppercase;
+    background-color: #B3093F;
+}
+
+.title-presentation{
+    text-transform: uppercase;
+}
+
 .navbar {
     background-color: var(--color1);
     text-transform: uppercase;
@@ -47,14 +56,16 @@ p{
 }
 
 
-.card, .card-title, .card-text {
-    color: var(--color4)
+.card, .card-text {
+    color: var(--color4);
+    
 }
 
 .card-link {
     text-decoration: none;
     color: cyan;
 }
+
 
 /* 
 .navFormations{

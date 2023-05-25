@@ -35,7 +35,7 @@ function Cursos() {
         </section>
         <section className="cards-courses container d-flex flex-wrap gap-1 justify-content-center">
           <Card titleCurse="JavaScript" />
-          <Card titleCurse="HTML" />
+          <Card titleCurse="<HTML/>" />
           <Card titleCurse="CSS" />
           <Card titleCurse="React.JS" />
           <Card titleCurse="php" />
