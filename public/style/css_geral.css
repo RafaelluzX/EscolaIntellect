@@ -67,3 +67,7 @@ body{
     text-decoration: none;
     color: var(--color4)
 }
+
+.icons a{
+ display: inline;
+}
