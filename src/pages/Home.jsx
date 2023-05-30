@@ -35,7 +35,9 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
+                <Link to="/idiomas" className="card-link align-self-center">
                 <button className="buttons-home" >Acessar</button> 
+                </Link>
               </div>
             </div>
           </div>
@@ -48,7 +50,7 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <Link to="/cursos" className="card-link align-self-center">
+                <Link to="/programacao" className="card-link align-self-center">
                  <button className="buttons-home" >Acessar</button> 
                 </Link>
               </div>
@@ -63,7 +65,10 @@ function Home() {
                 Trabalhe com dados. Aprofunde seu conhecimento nas principais
                  ferramentas de uma pessoa data  
                 </p>
+                <Link to="/datascience" className="card-link align-self-center">
                 <button className="buttons-home" >Acessar</button> 
+                </Link>
+                
               </div>
             </div>
           </div>
@@ -76,7 +81,9 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
+                <Link to="/uxdesign" className="card-link align-self-center">
                 <button className="buttons-home" >Acessar</button> 
+                </Link>
               </div>
             </div>
           </div>
@@ -84,12 +91,14 @@ function Home() {
             <div className="card">
               <img src={medio} className="card-img" alt="" />
               <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
-                <h5 className="card-title">Ensino médio</h5>
+                <h5 className="card-title">Aula de Reforço</h5>
                 <p className="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
+                <Link to="/reforco" className="card-link align-self-center">
                 <button className="buttons-home" >Acessar</button> 
+                </Link>
               </div>
             </div>
           </div>
@@ -102,7 +111,9 @@ function Home() {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
+                <Link to="/gestao" className="card-link align-self-center">
                 <button className="buttons-home" >Acessar</button> 
+                </Link>
               </div>
             </div>
           </div>

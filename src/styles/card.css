@@ -16,12 +16,13 @@
 }
 
 
-.buttonCard , .buttons-home{
+.buttonCard , .buttons-home, a{
     border-radius: 8px;
     min-width: 200px;
     margin: 0 auto;
     background-color: #B3093F;
-    
+    text-decoration: none;
+  
 }
 
 .buttonCard a {

@@ -15,7 +15,7 @@ function Login() {
   };
 
   function loginApi(event) {
-    event.preventDefault()
+    event.preventDefault();
     fetch("http://localhost:3000/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -27,8 +27,6 @@ function Login() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-          alert("OK");
-        
       });
   }
 

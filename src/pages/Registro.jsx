@@ -20,7 +20,7 @@ function Registro() {
 
   function createAcount(e) {
     e.preventDefault()
-    fetch("http://localhost:3030/users/create", {
+    fetch("http://localhost:3000/users/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

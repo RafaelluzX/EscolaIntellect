@@ -1,7 +1,12 @@
 import React from "react";
 import Home from "./pages/Home"
 import Login from "./pages/Login";
-import Cursos from "./pages/Cursos"
+import Programação from "./pages/Programação"
+import DataScience from "./pages/Datascience"
+import UxDesign from "./pages/UxDesign"
+import Idiomas from "./pages/Idiomas"
+import Gestao from "./pages/Gestao"
+import Reforco from "./pages/Reforco"
 import Registro from "./pages/Registro"
 import { 
       BrowserRouter,
@@ -15,9 +20,14 @@ function App() {
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/Cursos" element={<Cursos/>} />
-      <Route path="/Login" element={<LoginOrRegister/>} />
-      <Route path="/Registro" element={<Registro/>} />
+      <Route path="/programacao" element={<Programação/>} />
+      <Route path="/datascience" element={<DataScience/>} />
+      <Route path="/uxdesign" element={<UxDesign/>} />
+      <Route path="/idiomas" element={<Idiomas/>} />
+      <Route path="/gestao" element={<Gestao/>} />
+      <Route path="/reforco" element={<Reforco/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/registro" element={<Registro/>} />
     </Routes>
   </BrowserRouter>
   );
