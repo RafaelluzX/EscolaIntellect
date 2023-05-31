@@ -1,6 +1,5 @@
 import React from "react";
 import Home from "./pages/Home"
-import Login from "./pages/Login";
 import Programação from "./pages/Programação"
 import DataScience from "./pages/Datascience"
 import UxDesign from "./pages/UxDesign"
@@ -26,7 +25,7 @@ function App() {
       <Route path="/idiomas" element={<Idiomas/>} />
       <Route path="/gestao" element={<Gestao/>} />
       <Route path="/reforco" element={<Reforco/>} />
-      <Route path="/login" element={<Login/>} />
+      <Route path="/login" element={<LoginOrRegister/>} />
       <Route path="/registro" element={<Registro/>} />
     </Routes>
   </BrowserRouter>
