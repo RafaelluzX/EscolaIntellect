@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/FrontCheckpoint/static/css/main.0dda6f6b.css",
+    "main.js": "/FrontCheckpoint/static/js/main.83b516e7.js",
+    "static/media/php.jpg": "/FrontCheckpoint/static/media/php.8a7d9de7fa92219aeb63.jpg",
+    "static/media/d.jpg": "/FrontCheckpoint/static/media/d.0770d9d81f9b5040ebf4.jpg",
+    "static/media/gestao.jpg": "/FrontCheckpoint/static/media/gestao.2cb3e9ec78175ed2d875.jpg",
+    "static/media/p.jpg": "/FrontCheckpoint/static/media/p.929b37576569c5505931.jpg",
+    "static/media/ux.jpg": "/FrontCheckpoint/static/media/ux.3502b4cf86c69b814e19.jpg",
+    "static/media/user.jpg": "/FrontCheckpoint/static/media/user.613d69051bfda500241e.jpg",
+    "static/media/idiomas.jpg": "/FrontCheckpoint/static/media/idiomas.532ecbe1638388ec7c73.jpg",
+    "index.html": "/FrontCheckpoint/index.html",
+    "main.0dda6f6b.css.map": "/FrontCheckpoint/static/css/main.0dda6f6b.css.map",
+    "main.83b516e7.js.map": "/FrontCheckpoint/static/js/main.83b516e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dda6f6b.css",
+    "static/js/main.83b516e7.js"
+  ]
+}

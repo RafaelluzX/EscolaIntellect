@@ -1,0 +1,72 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #B3093F;
+    --color2: #4B88A2;
+    --color3: #D3D4D9;
+    --color4: #FFF9FB;
+    --color5: #252627;
+    --ff:'Oswald', sans-serif;
+}
+
+
+body{
+    background-color: var(--color4);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+
+
+.navbar {
+    background-color: var(--color1);
+    text-transform: uppercase;
+}
+
+.logo {
+    letter-spacing: 3px;
+}
+
+.nav-link {
+    color: var(--color4);
+}
+
+.dropdown-menu {
+    background-color: var(--color1);
+}
+
+.dropdown-item {
+    color: var(--color4);
+}
+
+.btn-outline-success{
+    border-color: var(--color4);
+    color: var(--color4);
+}
+
+.user-name {
+    color: var(--color4);
+}
+
+.footer-geral {
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+.footer-geral ul {
+    list-style: none;
+}
+
+.footer-geral a {
+    text-decoration: none;
+    color: var(--color4)
+}
+
+.icons a{
+ display: inline;
+}
