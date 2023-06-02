@@ -9,6 +9,8 @@ import gestao from "../images/gestao.jpg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import "../styles/cursos.css";
+import "../styles/css_pg-inicial.css";
 
 function Home() {
   return (
@@ -36,7 +38,7 @@ function Home() {
                   the bulk of the card's content.
                 </p>
                 <Link to="/idiomas" className="card-link align-self-center">
-                <button className="buttons-home" >Acessar</button> 
+                  <button className="buttons-home">Acessar</button>
                 </Link>
               </div>
             </div>
@@ -51,7 +53,7 @@ function Home() {
                   the bulk of the card's content.
                 </p>
                 <Link to="/programacao" className="card-link align-self-center">
-                 <button className="buttons-home" >Acessar</button> 
+                  <button className="buttons-home">Acessar</button>
                 </Link>
               </div>
             </div>
@@ -62,13 +64,12 @@ function Home() {
               <div className="card-body card-img-overlay d-flex flex-column justify-content-center">
                 <h5 className="card-title">Data Science</h5>
                 <p className="card-text">
-                Trabalhe com dados. Aprofunde seu conhecimento nas principais
-                 ferramentas de uma pessoa data  
+                  Trabalhe com dados. Aprofunde seu conhecimento nas principais
+                  ferramentas de uma pessoa data
                 </p>
                 <Link to="/datascience" className="card-link align-self-center">
-                <button className="buttons-home" >Acessar</button> 
+                  <button className="buttons-home">Acessar</button>
                 </Link>
-                
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ function Home() {
                   the bulk of the card's content.
                 </p>
                 <Link to="/uxdesign" className="card-link align-self-center">
-                <button className="buttons-home" >Acessar</button> 
+                  <button className="buttons-home">Acessar</button>
                 </Link>
               </div>
             </div>
@@ -97,7 +98,7 @@ function Home() {
                   the bulk of the card's content.
                 </p>
                 <Link to="/reforco" className="card-link align-self-center">
-                <button className="buttons-home" >Acessar</button> 
+                  <button className="buttons-home">Acessar</button>
                 </Link>
               </div>
             </div>
@@ -112,7 +113,7 @@ function Home() {
                   the bulk of the card's content.
                 </p>
                 <Link to="/gestao" className="card-link align-self-center">
-                <button className="buttons-home" >Acessar</button> 
+                  <button className="buttons-home">Acessar</button>
                 </Link>
               </div>
             </div>
